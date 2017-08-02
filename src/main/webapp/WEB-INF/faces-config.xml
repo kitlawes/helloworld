@@ -16,9 +16,5 @@
       <managed-bean-name>userData</managed-bean-name>
       <managed-bean-class>com.tutorialspoint.test.UserData</managed-bean-class>
       <managed-bean-scope>request</managed-bean-scope>
-      <managed-property>
-         <property-name>messageService</property-name>
-         <value>#{messageService}</value>
-      </managed-property>
    </managed-bean> 
 </faces-config>

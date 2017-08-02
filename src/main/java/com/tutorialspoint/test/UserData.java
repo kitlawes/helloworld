@@ -1,21 +1,23 @@
 package com.tutorialspoint.test;
 
 import java.io.Serializable;
+import java.util.Date;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "userData", eager = true)
+@SessionScoped
 public class UserData implements Serializable {
-
    private static final long serialVersionUID = 1L;
-	private MessageService messageService;
+   private Date createTime = new Date();
+   private String message = "Hello World!";
 
-   public MessageService getMessageService() {
-      return messageService;
+   public Date getCreateTime() {
+      return(createTime);
    }
-
-   public void setMessageService(MessageService messageService) {
-      this.messageService = messageService;
-   }
-
-   public String getGreetingMessage() {
-      return messageService.getGreetingMessage();
+   
+   public String getMessage() {
+      return(message);
    }
 }
